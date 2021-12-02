@@ -21,7 +21,7 @@ function Hero() {
         <h1>{artist.name}</h1>
         <p>{`${artist.tracker_count} Followers • ${artist.upcoming_event_count} Upcoming Concerts`}</p>
       </div>
-      <button className="Action">Follow</button>
+      <button className="Action" onClick={() => alert("suprise, I didn't implement this")}>Follow</button>
     </div>
   );
 }
