@@ -51,7 +51,7 @@ function App() {
           <li>{item}</li>
         ))}
       </ul> */}
-      { isEmpty(artist) ? <h1>404 artist not found</h1> : <Hero artist={artist} /> }
+      { isEmpty(artist) ? <h1>404 artist not found, try Nate Smith</h1> : <Hero artist={artist} /> }
     </div>
   );
 }
