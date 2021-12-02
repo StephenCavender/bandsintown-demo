@@ -1,12 +1,14 @@
 .Hero {
   background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-flow: row wrap;
   border-radius: 5px;
-  margin: 20px;
   padding: 30px;
+  margin-top: 20px;
+  width: 80%;
 }
 
 .Artist-Thumb {
