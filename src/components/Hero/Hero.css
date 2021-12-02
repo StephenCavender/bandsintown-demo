@@ -1,0 +1,23 @@
+.Hero {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 30px;
+}
+
+.Artist-Thumb {
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 100%;
+  margin-right: 40px;
+}
+
+.Artist-Info {
+  align-self: center;
+}
+
+.Action {
+  margin-left: auto;
+}
