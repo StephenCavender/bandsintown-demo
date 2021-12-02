@@ -22,13 +22,13 @@ export interface ArtistData {
    * @type {string}
    * @memberof ArtistData
    */
-  imageUrl: string;
+  image_url: string;
   /**
    * 
    * @type {string}
    * @memberof ArtistData
    */
-  thumbUrl: string;
+  thumb_url: string;
   /**
    * 
    * @type {string}
@@ -46,11 +46,11 @@ export interface ArtistData {
    * @type {number}
    * @memberof ArtistData
    */
-  trackerCount: number;
+  tracker_count: number;
   /**
    * 
    * @type {number}
    * @memberof ArtistData
    */
-  upcomingEventCount: number;
+  upcoming_event_count: number;
 }
