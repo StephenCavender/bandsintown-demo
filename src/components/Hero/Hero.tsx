@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import { ArtistData } from '../../models/artist';
 import './Hero.css';
+import { isEmpty } from 'lodash';
 
 function Hero() {
-  const [artist, setArtist] = useState(undefined);
+  const [artist, setArtist] = useState({} as ArtistData);
 
-  // useEffect(() => {
-  //   fetch('https://pokeapi.co/api/v2/pokemon/')
-  //   .then((response) => response.json())
-  //   .then(({ count, results }) => {
-  //     setCount(count);
-  //     const names = results.map(r => r.name);
-  //     setPokemon(names);
-  //   });
-  // }, [])
+  useEffect(() => {
+    fetch('https://rest.bandsintown.com/artists/jasonisbell?app_id=test')
+    .then((response) => response.json())
+    .then((result: ArtistData) => {
+      setArtist(result);
+    });
+  }, [])
 
-  return (
-    <div className="Hero" style={{ backgroundImage: `url("https://via.placeholder.com/500")`}}>
-      <img src="https://photos.bandsintown.com/thumb/11885985.jpeg" className="Artist-Thumb" alt="artist-thumb" />
-      <div>
-        <h1>Artist Name</h1>
-        <p>497,199 Followers • 51 Upcoming Concerts</p>
+  return isEmpty(artist) ? <p>Loading...</p> : (
+    <div className="Hero" style={{ backgroundImage: `url("${artist.image_url}")` }}>
+      <img src={artist.image_url} className="Artist-Thumb" alt="artist-thumb" />
+      <div className="Artist-Info">
+        <h1>{artist.name}</h1>
+        <p>{`${artist.tracker_count} Followers • ${artist.upcoming_event_count} Upcoming Concerts`}</p>
       </div>
       <button className="Action">Follow</button>
     </div>

@@ -1,5 +1,7 @@
 .Hero {
   background-color: rgba(0,0,0,0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-flow: row wrap;
   border-radius: 5px;
@@ -16,6 +18,7 @@
 
 .Artist-Info {
   align-self: center;
+  color: #fff;
 }
 
 .Action {
